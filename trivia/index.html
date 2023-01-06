@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>What's the Capital of Pakistan?</h3>
+                <button id="a">Peshawar</button>
+                <button id="b">Karachi</button>
+                <button id="c">Islamabad</button>
+                <p id="para1"></p>
+                <script>
+                    let btn1 = document.querySelector('#a');
+                    btn1.addEventListener('click', function(){
+                        btn1.style.backgroundColor = 'red';
+                        document.querySelector('#para1').innerHTML = 'incorrect!';
+                    });
+                    let btn2 = document.querySelector('#b');
+                    btn2.addEventListener('click', function(){
+                        btn2.style.backgroundColor = 'red';
+                        document.querySelector('#para1').innerHTML = 'incorrect!';
+                    });
+                    let btn3 = document.querySelector('#c');
+                    btn3.addEventListener('click', function(){
+                        btn3.style.backgroundColor = 'green';
+                        document.querySelector('#para1').innerHTML = 'Correct!';
+                    });
+                </script>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>What's the Current Year?</h3>
+                <input autofocus id="name" type="text">
+                <button id="check">Check</button>
+                <p id="para2"></p>
+                <script>
+                    document.querySelector('#check').addEventListener('click', function(){
+                        let input = document.querySelector('input');
+                        if(input.value == '2022')
+                        {
+
+                            input.style.backgroundColor = 'green';
+                            document.querySelector('#para2').innerHTML = 'Correct!';
+                        }
+                        else{
+                            
+                            input.style.backgroundColor = 'red';
+                            document.querySelector('#para2').innerHTML = 'incorrect!';
+                        }
+                    });
+                </script>
+            </div>
+        </div>
+    </body>
+</html>

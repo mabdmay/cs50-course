@@ -1,0 +1,1 @@
+select title, rating from movies, ratings where year = 2010 and id = movie_id order by rating desc, title;
